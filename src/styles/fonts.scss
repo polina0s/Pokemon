@@ -1,27 +1,33 @@
 @font-face {
-  src: url(./assets/fonts/Karla/Karla-Bold.ttf) format("truetype");
+  src: url("../assets/fonts/Karla/Karla-Bold.ttf") format("truetype");
 
   font-family: Karla;
   font-weight: 700;
 }
 
 @font-face {
-  src: url(./assets/fonts/Karla/Karla-Regular.ttf) format(truetype);
+  src: url("../assets/fonts/Karla/Karla-Regular.ttf") format("truetype");
 
   font-family: Karla;
   font-weight: 400;
 }
 
 @font-face {
-  src: url(./assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf) format(truetype);
+  src: url("../assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype");
 
   font-family: SourceSansPro;
   font-weight: 400;
 }
 
 @font-face {
-    src: url(./assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    src: url("../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 
     font-family: "Roboto";
     font-weight: 400;
+}
+
+h1 {
+  color: aquamarine;
+  font-family: Karla;
+  font-weight: 400;
 }
