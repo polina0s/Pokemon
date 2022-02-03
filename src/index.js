@@ -1,2 +1,2 @@
-import "./styles/a.scss";
+import "./styles/fonts.scss";
 console.log("Паша лох");
