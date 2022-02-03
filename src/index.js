@@ -1,2 +1,1 @@
-import "./styles/a.scss";
-console.log("Паша лох");
+import "./styles/main.scss";
