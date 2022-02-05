@@ -1,1 +1,7 @@
-@import url('./fonts.scss');
+@import "./normalize.css";
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "./home.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
+

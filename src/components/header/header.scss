@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+a {
+  text-decoration: none;
+  color: $paragraph;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $header;
+  box-shadow: 0px 4px 16px 0px rgba(1, 28, 64, 0.2);
+  position: relative;
+
+  &__cont {
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+    min-height: 93px;
+    max-width: 1136px;
+  }
+
+  &__logo {
+  height: 63px;
+}
+
+&__nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+&__nav-item {
+  font: 400 25px $mainFont;
+  line-height: 29px;
+  list-style-type: none;
+  color: $text;
+  margin-right: 70px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+
+}
+
+

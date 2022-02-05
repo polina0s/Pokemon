@@ -4,13 +4,14 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["./src/index.js", "./src/styles/main.scss"],
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "index_bundle.js",
   },
+
   devServer: {
-    port: 3030,
+    port: 3000,
     hot: true,
     static: {
       directory: path.join(__dirname, "src"),
@@ -25,7 +26,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [
           // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,

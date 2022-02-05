@@ -1,8 +1,28 @@
 doctype html 
 html(lang="en")
-head 
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Pokemon
-body 
-h1 pasha jjjjooopppaaa
+    head 
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Pokemon
+    body
+        include  ../components/header/header.pug
+        div.home
+            div.home__cont 
+                div.home__text-cont
+                    h1.home__title  
+                        b Find 
+                        | all your
+                        br
+                        | favorite 
+                        br
+                        b Pokemon
+                    p.home__desc
+                        | You can know the type of Pokemon,
+                        br
+                        | its strengths, disadvantages and
+                        br 
+                        | abilities
+                    button.button--big.button--green See pokemons
+                div.home__img-cont 
+                    img(src="../assets/images/Pikachu.svg", alt="Pikachu").home__pikachu
+            include ../components/footer/footer.pug

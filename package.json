@@ -13,6 +13,7 @@
     "eslint-plugin-vue": "^8.4.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
     "prettier": "2.5.1",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
@@ -39,6 +40,7 @@
   },
   "homepage": "https://github.com/polina0s/Pokemon#readme",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "pug-cli": "^1.0.0-alpha6"
   }
 }

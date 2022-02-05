@@ -1,0 +1,59 @@
+/* Colors */
+$header: #F5DB13;
+$danger: #D93E30;
+$legendaries: #212121;
+$homeButton: #73D677;
+$button404: #F2CB07;
+$grassButton: #70A83B;
+$poisonButton: #07D6F2;
+$text: #000000;
+$paragraph: #212121;
+$yellowGradient: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+
+/* Fonts */
+$mainFont: Karla, sans-serif;
+$smallButton: Roboto, sans-serif;
+$desc: SourceSansPro, sans-serif;
+
+button {
+  font: 400 12px Roboto, sans-serif;
+  color: $paragraph;
+  line-height: 14px;
+}
+
+.button--big {
+  min-width: 231px;
+  padding: 17px 36px;
+}
+
+.button--green {
+  background: $homeButton;
+  font: 700 23px $mainFont;
+  border-radius: 11px;
+  border: $homeButton;
+  box-shadow: 0px -9px 0px 0px rgba(0, 0, 0, 0.18) inset;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  color: $text;
+  font: 400 $mainFont;
+}
+
