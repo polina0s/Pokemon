@@ -15,25 +15,6 @@ $mainFont: Karla, sans-serif;
 $smallButton: Roboto, sans-serif;
 $desc: SourceSansPro, sans-serif;
 
-button {
-  font: 400 12px Roboto, sans-serif;
-  color: $paragraph;
-  line-height: 14px;
-}
-
-.button--big {
-  min-width: 231px;
-  padding: 17px 36px;
-}
-
-.button--green {
-  background: $homeButton;
-  font: 700 23px $mainFont;
-  border-radius: 11px;
-  border: $homeButton;
-  box-shadow: 0px -9px 0px 0px rgba(0, 0, 0, 0.18) inset;
-  text-align: center;
-}
 
 * {
   box-sizing: border-box;

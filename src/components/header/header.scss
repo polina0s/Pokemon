@@ -23,28 +23,48 @@ a {
     max-width: 1136px;
   }
 
-  &__logo {
-  height: 63px;
-}
-
-&__nav {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-&__nav-item {
-  font: 400 25px $mainFont;
-  line-height: 29px;
-  list-style-type: none;
-  color: $text;
-  margin-right: 70px;
-
-  &:last-child {
-    margin-right: 0px;
+    &__logo {
+    height: 63px;
   }
-}
 
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-}
+  &__nav-item {
+    font: 400 25px $mainFont;
+    line-height: 29px;
+    list-style-type: none;
+    color: $text;
+    margin-right: 70px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      background-color: $paragraph;
+      height: 3px;
+      content: "";
+      transition: 0.5s;
+      left: 0px;
+      right: 0px;
+      bottom: -16px;
+      transition: 0,5s;
+      width: 0px;
+      border-radius: 5px;
+      color: $paragraph;
+    }
+
+    &:hover:after,
+    &:focus::after {
+      width: 100%;
+    }
+  }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
 
 

@@ -28,11 +28,14 @@
     display: flex;
     margin: 0 auto;
     margin-bottom: 129px;
+    position: relative;
   }
 
   &__text-cont {
     max-width: 1283px;
     margin-top: 128px;
+    position: relative;
+    z-index: 1;
   }
 
   &__title {
@@ -51,10 +54,13 @@
 
   &__img-cont {
     margin-top: 67px;
+    position: absolute;
+    z-index: 3;
+    right: 0;
   }
 
   &__pikachu {
     width: 793px;
-    height: 680px;
+    height: 100%;
   }
 }
