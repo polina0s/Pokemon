@@ -10,6 +10,8 @@ html(lang="en")
         include  ../components/header/header.pug
         div.home
             div.home__cont 
+                div.home__img-cont 
+                    div.home__pikachu
                 div.home__text-cont
                     h1.home__title  
                         b Find 
@@ -24,7 +26,6 @@ html(lang="en")
                         | its strengths, disadvantages and
                         br 
                         | abilities
-                    +btn('See pokemons')(class="btn--big btn--green")
-                div.home__img-cont 
-                    div.home__pikachu
+                    +btn('See pokemons')(class=" main-btn btn--big btn--green")
+                
             include ../components/footer/footer.pug

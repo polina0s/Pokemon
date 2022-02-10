@@ -28,20 +28,18 @@ $mobile-w: 375px;
   }
 }
 
-@mixin popup {
-  position: fixed;
-  top: -100%;
-  width: 100%;
-  background: $yellowGradient;
-  display: flex;
-  transition: 0.2s;
-  border-radius: 0px 0px 16px 16px;
-}
-
 @mixin mobile {
   @media screen  and (max-width: $tablet-w - 1) {
     @content
   }
+}
+
+@mixin popup {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  display: flex;
+  transition: 0.2s;
 }
 
 

@@ -21,3 +21,4 @@ function clickClose(e) {
 
 btnClose.addEventListener("click", clickClose);
 btnOpen.addEventListener("click", clickOpen);
+Ф;

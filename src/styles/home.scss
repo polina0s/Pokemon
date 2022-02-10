@@ -9,6 +9,11 @@
     margin: 0 auto;
     margin-bottom: 129px;
     position: relative;
+
+    @include tablet {
+      
+      
+    }
   }
 
   &__text-cont {
@@ -16,6 +21,11 @@
     margin-top: 128px;
     position: relative;
     z-index: 1;
+
+    @include tablet {
+      max-width: 730px;
+      display: block;
+    }
   }
 
   &__title {
@@ -24,12 +34,18 @@
     line-height: 84px;
     letter-spacing: 4px;
     padding-bottom: 64px;
+    text-align: center;
   }
 
   &__desc {
     font: 400 32px $mainFont;
     line-height: 37px;
     padding-bottom: 64px;
+
+    @include tablet {
+      font-size: 24px;
+      text-align: center;
+    }
   }
 
   &__img-cont {
@@ -39,6 +55,13 @@
     right: 0;
     width: 809px;
     height: 720px;
+
+    @include tablet {
+      width: 706px;
+      height: 539px;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   &__pikachu {
@@ -48,5 +71,10 @@
     background-position: -10px 0px;
     width: 100%;
     height: 100%;
+
+    @include tablet {
+
+    }
   }
 }
+ 
