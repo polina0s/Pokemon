@@ -17,14 +17,31 @@ a {
     align-items: center;   
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0px 15px;
-    box-sizing: content-box;
     min-height: 93px;
     max-width: 1136px;
+
+   @include tablet {
+      max-width: 691px;      
+    }
   }
 
-    &__logo {
-    height: 63px;
+    &__logo-cont {
+      width: 157px;
+      height: 63px;
+
+    @include tablet {
+      width: 121px;
+      height: 45px;
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: 100%;
   }
 
   &__nav {
@@ -39,6 +56,12 @@ a {
     color: $text;
     margin-right: 70px;
     position: relative;
+
+    @include tablet {
+      font-size: 19px;
+      line-height: 22px;
+      margin-right: 40px;
+    }
 
     &::after {
       position: absolute;
@@ -66,5 +89,130 @@ a {
     }
   }
 
+.popup {
+    display: none;
+  }
+
+
+
+  @include mobile {
+    .header {
+
+      &__cont {
+        min-height: 56px;
+        padding: 0 26px;
+      } 
+
+       &__logo-cont {
+      width: 59px;
+      height: 22px;
+      }
+
+      &__menu-cont {
+        display: none;
+      }
+
+      &__btn {
+        display: flex;
+        align-items: center;
+      }
+
+      &__btn-field {
+          cursor: pointer;
+      }
+
+      &__bar {
+        display: block;
+        width: 31px;
+        height: 5px;
+        border-radius: 2px;
+        margin-bottom: 2px;
+        background-color: $paragraph;
+        
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      &__nav-item {
+        font-size: 27px;
+        line-height: 32px;
+      }
+    }  
+
+    .popup {
+      @include popup;
+      min-height: 344px;
+      z-index: 100;
+
+      
+
+      &__close-cont {
+      width: 323px;
+      height: 31px;
+      margin-top: 16px;
+      position: absolute;
+      right: 26px;
+      }
+
+      &__close-icon {
+        width: 31px;
+        height: 31px;
+        float: right;
+        cursor: pointer;
+      } 
+
+      &__close-img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &__nav-cont {
+        width: 205px;
+        height: 263px;
+        margin: 0 auto;
+        margin-top: 37px;
+      }
+
+      &__logo-cont {
+        width: 138px;
+        height: 51px;
+        margin: 0 auto;
+        margin-bottom: 36px;
+      }
+
+      &__logo-img {
+        width: 100%;
+        height: 100%;
+      } 
+
+      &__menu {
+        margin: 0 auto;
+      }
+
+      &__nav-list {
+        list-style: none;
+        text-align: center;
+      }
+
+      &__nav-item {
+        font: 400 27px $mainFont;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      &--open {
+        top: 0;
+      }
+
+      &--close {
+        top: -100%;
+      }
+      
+    }
+  }
 
 

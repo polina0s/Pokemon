@@ -9,11 +9,40 @@ $poisonButton: #07D6F2;
 $text: #000000;
 $paragraph: #212121;
 $yellowGradient: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+$transparentBlack: rgba(0, 0, 0, 0.5);
 
 /* Fonts */
 $mainFont: Karla, sans-serif;
 $smallButton: Roboto, sans-serif;
 $desc: SourceSansPro, sans-serif;
+
+/*  */
+$desktop-w: 1440px;
+$tablet-w: 768px;
+$mobile-w: 375px;
+
+/* @media mixins */
+@mixin tablet {
+   @media screen and (max-width: $desktop-w - 1) {
+    @content
+  }
+}
+
+@mixin popup {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: $yellowGradient;
+  display: flex;
+  transition: 0.2s;
+  border-radius: 0px 0px 16px 16px;
+}
+
+@mixin mobile {
+  @media screen  and (max-width: $tablet-w - 1) {
+    @content
+  }
+}
 
 
 * {

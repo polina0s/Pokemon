@@ -1,14 +1,42 @@
 header.header 
     div.header__cont
-      a(href="#") 
-        img(src="../assets/images/Logo.svg", alt="pokemon").header__logo
-      nav 
-       ul.header__nav 
-        li.header__nav-item 
-          a(href="").header__nav-link Home 
-        li.header__nav-item 
-          a(href="").header__nav-link Pokédex
-        li.header__nav-item  
-          a(href="").header__nav-link Legendaries
-        li.header__nav-item  
-          a(href="").header__nav-link Documentation
+      div.header__logo-cont
+        a(href="#") 
+          img(src="../../assets/images/Logo.svg", alt="pokemon").header__logo-img
+      nav.header__menu
+        div.header__btn
+              div#btnOpen(class="header__btn-field open")
+                span.header__bar  
+                span.header__bar  
+                span.header__bar 
+        div.header__menu-cont  
+          ul.header__nav 
+            li.header__nav-item 
+              a(href="").header__nav-link Home 
+            li.header__nav-item 
+              a(href="").header__nav-link Pokédex
+            li.header__nav-item  
+              a(href="").header__nav-link Legendaries
+            li.header__nav-item  
+              a(href="").header__nav-link Documentation
+
+div#popup(class="popup")
+  div.popup__menu
+    div#btnClose(class="popup__close-cont")
+      div.popup__close-icon
+        a(href="#")
+          img(src="../../assets/images/closeIcon.svg", alt="Close").popup__close-img
+    div.popup__nav-cont
+      div.popup__logo-cont
+        a(href="#")
+          img(src="../../assets/images/Logo.svg", alt="Pokemon").popup__logo-img
+      div.popup__nav-list-cont
+        ul.popup__nav-list 
+            li.popup__nav-item 
+              a(href="").popup__nav-link Home 
+            li.popup__nav-item 
+              a(href="").popup__nav-link Pokédex
+            li.popup__nav-item  
+              a(href="").popup__nav-link Legendaries
+            li.popup__nav-item  
+              a(href="").popup__nav-link Documentation
