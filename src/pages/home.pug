@@ -15,17 +15,11 @@ html(lang="en")
                 div.home__text-cont
                     h1.home__title  
                         b Find 
-                        | all your
-                        br
-                        | favorite 
-                        br
+                        | all your favorite 
                         b Pokemon
                     p.home__desc
-                        | You can know the type of Pokemon,
-                        br
-                        | its strengths, disadvantages and
-                        br 
-                        | abilities
-                    +btn('See pokemons')(class=" main-btn btn--big btn--green")
+                        | You can know the type of Pokemon, its strengths, disadvantages and abilities
+                    div.home__btn-cont    
+                        +btn('See pokemons')(class="home__btn btn--big btn--green")
                 
             include ../components/footer/footer.pug

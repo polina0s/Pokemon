@@ -8,6 +8,15 @@
     max-width: 1125px;
     margin: 0 auto;
     padding-bottom: 33px;
+
+    @include tablet {
+      max-width: 695px;
+      padding-bottom: 23px;
+    }
+
+    @include mobile {
+      padding-bottom: 16px;
+    }
   }
 
   &__nav {
@@ -15,13 +24,37 @@
     display: flex;
     text-align: center;
     justify-content: space-between;
+
+    @include mobile {
+    flex-direction: column;
+    }
   }
 
-  &__link {
+  &__item {
     font: 700 18px $mainFont;
-    color: $paragraph;
     line-height: 21px;
-  }
 
-}
+    &--platzi {
+      @include tablet {
+      font-weight: 400;
+      font-size:  16px;
+      line-height: 20px;
+      }
+
+      @include mobile {
+        font-weight: 400;
+        font-size:  16px;
+        line-height: 20px;
+        order: 2;
+      }
+    }
+
+    &--team {
+      @include mobile {
+        order: 1;
+        padding-bottom: 5px;
+      }  
+    }
+  }
+}    
 

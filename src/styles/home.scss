@@ -7,24 +7,34 @@
     max-width: 1283px;
     display: flex;
     margin: 0 auto;
-    margin-bottom: 129px;
+    padding-bottom: 129px;
     position: relative;
 
     @include tablet {
-      
-      
+      padding-bottom: 61px;
+    }
+
+    @include mobile {
+      padding-bottom: 28px;
     }
   }
 
   &__text-cont {
-    max-width: 1283px;
-    margin-top: 128px;
+    max-width: 516px;
+    padding-top: 128px;
     position: relative;
     z-index: 1;
 
     @include tablet {
       max-width: 730px;
       display: block;
+      margin: 0 auto;
+      padding-top: 497px;
+    }
+
+    @include mobile {
+      max-width: 368px;
+      padding-top: 333px;
     }
   }
 
@@ -34,7 +44,18 @@
     line-height: 84px;
     letter-spacing: 4px;
     padding-bottom: 64px;
-    text-align: center;
+    text-align: left;
+
+    @include tablet {
+      text-align: center;
+      padding-bottom: 6px;
+    }
+
+    @include mobile {
+      font-size: 42px;
+      line-height: 49px;
+      padding-bottom: 5px;
+    }
   }
 
   &__desc {
@@ -45,6 +66,25 @@
     @include tablet {
       font-size: 24px;
       text-align: center;
+      line-height: 28px;
+      padding-bottom: 33px;
+    }
+
+    @include mobile {
+      padding-bottom: 42px;
+    }
+  }
+
+  &__btn {
+    @include tablet {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      padding: 12px 0px 22px 0px;
     }
   }
 
@@ -59,8 +99,16 @@
     @include tablet {
       width: 706px;
       height: 539px;
+      padding-top: 18px;
       margin: 0 auto;
-      display: block;
+      left: 0;
+    }
+
+    @include mobile {
+      width: 375px;
+      height: 287px;
+      padding: 0;
+      margin-top: 46px;
     }
   }
 
@@ -71,10 +119,5 @@
     background-position: -10px 0px;
     width: 100%;
     height: 100%;
-
-    @include tablet {
-
-    }
   }
 }
- 

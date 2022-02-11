@@ -9,6 +9,10 @@ $poisonButton: #07D6F2;
 $text: #000000;
 $paragraph: #212121;
 $yellowGradient: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+$bigBtnShadow: 0px -9px 0px 0px rgba(0, 0, 0, 0.18) inset;
+$smallBtnShadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
+
+
 $transparentBlack: rgba(0, 0, 0, 0.5);
 
 /* Fonts */
@@ -22,6 +26,7 @@ $tablet-w: 768px;
 $mobile-w: 375px;
 
 /* @media mixins */
+
 @mixin tablet {
    @media screen and (max-width: $desktop-w - 1) {
     @content
