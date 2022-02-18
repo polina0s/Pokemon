@@ -1,3 +1,5 @@
+include ../components/cards/card
+
 doctype html 
 html(lang="en")
     head 
@@ -5,5 +7,32 @@ html(lang="en")
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         title Pokédex
     body
-        include  ../components/header/header.
-        p sfalnflnskl
+        include  ../components/header/header.pug
+        div.background-pokedex 
+            div.pokedex
+                div.pokedex__cont
+                    div.pokedex__search-filter
+                        div.pokedex__search
+                            p.pokedex__title 800 
+                                b Pokemons 
+                                | for you to choose your favorite
+                            input.pokedex__input(type="text" placeholder="Encuentra tu pokémon...")
+                    div.pokedex__filters
+                        div.pokedex__select 
+                            span.pokedex__select-text Tipo
+                            span.pokedex__select-icon 
+                                img(src="../assets/images/selectIcon.svg", alt="")
+                        div.pokedex__select 
+                            span.pokedex__select-text Ataque
+                            span.pokedex__select-icon 
+                                img(src="../assets/images/selectIcon.svg", alt="")
+                        div.pokedex__select 
+                            span.pokedex__select-text Experiencia
+                            span.pokedex__select-icon 
+                                img(src="../assets/images/selectIcon.svg", alt="")
+                    div.pokedex__filter-btn
+                            span.pokedex__filter-btn-text Filter    
+            div.pokedex__cards-cont 
+                +card
+                                      
+                    

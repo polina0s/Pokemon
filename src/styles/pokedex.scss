@@ -1,0 +1,168 @@
+.background-pokedex {
+  height: 100%;
+  background: $greyGradient;
+}
+
+.pokedex {
+  width: 100%;
+  margin: 0 auto;
+
+  &__cont {
+    max-width: 1124px;
+    margin: 0 auto;
+    padding-top: 73px;
+
+    @include tablet {
+      max-width: 720px;
+      padding-top: 27px;
+    }
+
+    @include mobile {
+      max-width: 337px;
+      padding-top: 29px;
+    }
+  }
+
+  &__title {
+    font: 400 35px $mainFont;
+    line-height: 41px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-bottom: 34px;
+
+    @include tablet {
+      padding-bottom: 22px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+      padding-bottom: 29px;
+    }
+  }
+
+  &__search {
+    text-align: center;
+    padding-bottom: 36px;
+
+    @include tablet {
+      padding-bottom: 12px;
+    }
+
+    @include mobile {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__input {
+    width: 1088px;
+    height: 53px;
+    border-radius: 40px;
+    border: none;
+    padding: 16px 0px 16px 31px;
+    background: $grey;
+    font: 400 16px $desc;
+    line-height: 20px;
+    outline: none;
+    box-shadow: $deskInputShadow;
+
+    @include tablet {
+      width: 695px;
+      height: 36px;
+      padding: 8px 0px 8px 20px;
+      box-shadow: $tablInputShadow;
+
+    }
+
+    @include mobile {
+      width: 322px;
+      height: 31px;
+      padding: 8px 0px 8px 19px;
+      box-shadow: $mobInputShadow;
+    }
+  }
+
+  &__filters {
+    max-width: 533px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 49px;
+
+    @include tablet {
+      padding-left: 13px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__select {
+    min-width: 135px;
+    height: 21px;
+    border: none;
+    box-shadow: $tablInputShadow;
+    border-radius: 4px;
+    background: $grey;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    &-text {
+      font: 400 16px $desc;
+      line-height: 20px;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 11px;
+    }
+  }
+
+  &__filter-btn {
+    width: 77px;
+    height: 20px;
+    padding: 2px 0px 2px 15px;
+    background: $grey;
+    border-radius: 8px;
+    box-shadow: $tablInputShadow;
+    font: 400 12px $desc;
+    display: none;
+
+    &-text {
+      font: 400 12px $desc;
+    }
+
+    @include mobile {
+      display: flex;
+      margin-left: 6px;
+    }
+
+  }
+}
+
+
+// button.select
+//   div.select__inner
+//     span.select__text
+//     span.select__icon  \ svg
+
+// select__icon {
+    // &::after {
+    //   content: '';
+    //   width 20px
+    //   height: 20px;
+    //   background-img: url(lint to svg icon)
+    // position: absolute
+    // }
+// }
+
+// +filter(name)
+//   div.zalupa
+//    div.zalupa__counter
+
+// +filer(name)
+//   div.checkbox-wrapper
+//     input
+//     input
+//     input

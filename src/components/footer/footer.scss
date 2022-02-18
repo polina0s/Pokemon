@@ -3,19 +3,14 @@
 .footer {
   width: 100%;
   margin: 0 auto;
+  flex: 0 0 auto;
  
   &__cont {
     max-width: 1125px;
     margin: 0 auto;
-    padding-bottom: 33px;
 
     @include tablet {
       max-width: 695px;
-      padding-bottom: 23px;
-    }
-
-    @include mobile {
-      padding-bottom: 16px;
     }
   }
 

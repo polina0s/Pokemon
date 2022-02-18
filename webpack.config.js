@@ -22,6 +22,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/home.pug",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/pokedex.pug",
+      filename: "pokedex.html",
+    }),
   ],
   module: {
     rules: [

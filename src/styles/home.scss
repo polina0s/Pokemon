@@ -1,7 +1,23 @@
-.home {
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  height: 100%;
   background: $yellowGradient;
+  flex: 1 0 auto;
+}
+
+.home {
   width: 100%;
   margin: 0 auto;
+  
 
   &__cont {
     max-width: 1283px;
@@ -12,10 +28,12 @@
 
     @include tablet {
       padding-bottom: 61px;
+      padding-top: 18px;
     }
 
     @include mobile {
       padding-bottom: 28px;
+      padding-top: 46px;
     }
   }
 
@@ -99,16 +117,14 @@
     @include tablet {
       width: 706px;
       height: 539px;
-      padding-top: 18px;
       margin: 0 auto;
       left: 0;
+      
     }
 
     @include mobile {
       width: 375px;
       height: 287px;
-      padding: 0;
-      margin-top: 46px;
     }
   }
 

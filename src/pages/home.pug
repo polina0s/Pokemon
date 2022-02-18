@@ -8,18 +8,18 @@ html(lang="en")
         title Pokemon
     body
         include  ../components/header/header.pug
-        div.home
-            div.home__cont 
-                div.home__img-cont 
-                    div.home__pikachu
-                div.home__text-cont
-                    h1.home__title  
-                        b Find 
-                        | all your favorite 
-                        b Pokemon
-                    p.home__desc
-                        | You can know the type of Pokemon, its strengths, disadvantages and abilities
-                    div.home__btn-cont    
-                        +btn('See pokemons')(class="home__btn btn--big btn--green")
-                
+        div.background
+            div.home
+                div.home__cont 
+                    div.home__img-cont 
+                        div.home__pikachu
+                    div.home__text-cont
+                        h1.home__title  
+                            b Find 
+                            | all your favorite 
+                            b Pokemon
+                        p.home__desc
+                            | You can know the type of Pokemon, its strengths, disadvantages and abilities
+                        div.home__btn-cont    
+                            +btn('See pokemons')(class="home__btn btn--big btn--green")        
             include ../components/footer/footer.pug
