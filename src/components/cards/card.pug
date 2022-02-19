@@ -1,23 +1,21 @@
 include ../../components/button/button
 
-mixin card(title, attack, defense, tag, background, image)
+mixin card(params)
   div.card(class=attributes.class)= title
     div.card__info
-      p.card__info-title Pikachu
+      p.card__info-title= params.title ? params.title : 'Pickachu'
       div.card__info-prop
         div.card__info-prop-item
-          p.card__info-prop-numb 419
+          p.card__info-prop-numb= params.attack
           p.card__info-prop-char Attack 
         div.card__info-prop-item
-          p.card__info-prop-numb 49
+          p.card__info-prop-numb= params.defence
           p.card__info-prop-char Defence  
       div.card__tags
         +btn('Grass')(class="card__tags-item btn--small btn--green").card__tags-item
         +btn('Poison')(class="card__tags-item btn--small btn--blue").card__tags-item
-    div.card__img-cont
-      img(src="../../assets/images/PikachuCard.svg", alt="").card__img 
-
-
+    div.card__img-cont= params.background
+      img(src=params.img, alt="").card__img
 
 
 

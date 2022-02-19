@@ -33,7 +33,7 @@
         font-size: 15px;
         width: 38px;
         height: 36px;
-        border: 3px solid $legendaries;
+        border: 3px solid $lightBlack;
         border-radius: 50px;
         font-size: 15px;
         text-align: center;
@@ -61,8 +61,27 @@
 
   &__img-cont {
     min-width: 232px;
-    background: $darkYellowGradient;
     padding: 0 16px 0 49px;
+
+    &--yellow {
+      background: $darkYellowGradient;
+    }
+
+    &--blue {
+      background: $blueGradient
+    }
+
+    &--red {
+      background: $redGradient;
+    }
+
+    &--green {
+      background: $greenGradient;
+    }
+
+    &--pink {
+      background: $pinkGradient;
+    }
   }
 
   &__tags {

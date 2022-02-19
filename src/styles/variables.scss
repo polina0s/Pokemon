@@ -1,42 +1,46 @@
-/* Colors */
-$header: #F5DB13;
-$danger: #D93E30;
-$legendaries: #212121;
-$homeButton: #73D677;
-$button404: #F2CB07;
-$grassButton: #70A83B;
-$poisonButton: #07D6F2;
+// Colors
+$yellow: #F5DB13;
+$lightYellow: #F2CB07;
+$red: #D93E30;
+$black: #000000;
+$lightBlack: #212121;
+$green: #70A83B;
+$lightGreen: #73D677;
+$lightYellow: #F2CB07;
+$blue: #07D6F2;
 $grey: #F2F2F2;
 $lightGrey: #F6F7F9;
 $darkGrey: #4B4B4B;
-$text: #000000;
-$paragraph: #212121;
+
+// Gradients 
+$redGradient: linear-gradient(270deg, #B33327 0.15%, #D93E30 100%);
+$greenGradient: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%);
+$pinkGradient: linear-gradient(270deg, #F89EAE 0.15%, #F4B5C1 100%);
+$blueGradient: linear-gradient(270deg, #5BC7FA 0.15%, #35BAFF 100%);
 $yellowGradient: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
 $darkYellowGradient: linear-gradient(270deg, #F2CB07 0.15%, #F2B807 100%);
 $greyGradient: linear-gradient(180deg, #FFFFFF 30.32%, #F5F5F5 100%);
+
+// Shadows
 $bigBtnShadow: 0px -9px 0px 0px rgba(0, 0, 0, 0.18) inset;
 $smallBtnShadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
 $deskInputShadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
 $tablInputShadow: 2px 2px 2px 0px rgba(33, 33, 33, 0.1);
 $mobInputShadow: 4px 4px 4px 0px rgba(33, 33, 33, 0.1);
 
-
-
-
-
 $transparentBlack: rgba(0, 0, 0, 0.5);
 
-/* Fonts */
+// Fonts 
 $mainFont: Karla, sans-serif;
 $smallButton: Roboto, sans-serif;
 $desc: SourceSansPro, sans-serif;
 
-/*  */
+//
 $desktop-w: 1440px;
 $tablet-w: 768px;
 $mobile-w: 375px;
 
-/* @media mixins */
+// Media mixins
 
 @mixin tablet {
    @media screen and (max-width: $desktop-w - 1) {
@@ -77,7 +81,7 @@ ul {
 
 body {
   height: 100%;
-  color: $text;
+  color: $black;
   font: 400 $mainFont;
 }
 

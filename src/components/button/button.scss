@@ -1,6 +1,6 @@
 .btn {
   border-radius: 11px;
-  color: $paragraph;
+  color: $lightBlack;
   cursor: pointer;  
 
   &--big {
@@ -51,17 +51,17 @@
   }
 
   &--green {
-    background: $homeButton;
+    background: $lightGreen;
     border: none;
   }
 
   &--blue {
-    background-color: $poisonButton;
+    background-color: $blue;
     border: none;
   }
 
   &--yellow {
-    background-color: $header;
+    background-color: $yellow;
     border: none;
   }
 }

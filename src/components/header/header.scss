@@ -2,13 +2,13 @@
 
 a {
   text-decoration: none;
-  color: $paragraph;
+  color: $lightBlack;
 }
 
 .header {
   width: 100%;
   margin: 0 auto;
-  background-color: $header;
+  background-color: $yellow;
   box-shadow: 0px 4px 16px 0px rgba(1, 28, 64, 0.2);
   position: relative;
 
@@ -53,7 +53,7 @@ a {
     font: 400 25px $mainFont;
     line-height: 29px;
     list-style-type: none;
-    color: $text;
+    color: $black;
     margin-right: 70px;
     position: relative;
 
@@ -65,7 +65,7 @@ a {
 
     &::after {
       position: absolute;
-      background-color: $paragraph;
+      background-color: $lightBlack;
       height: 3px;
       content: "";
       transition: 0.5s;
@@ -75,7 +75,7 @@ a {
       transition: 0,5s;
       width: 0px;
       border-radius: 5px;
-      color: $paragraph;
+      color: $lightBlack;
     }
 
     &:hover:after,
@@ -125,7 +125,7 @@ a {
       height: 5px;
       border-radius: 2px;
       margin-bottom: 2px;
-      background-color: $paragraph;
+      background-color: $lightBlack;
       
       &:last-child {
         margin-bottom: 0px;
