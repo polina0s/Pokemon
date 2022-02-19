@@ -8,6 +8,7 @@
   &__cont {
     max-width: 1125px;
     margin: 0 auto;
+    padding-bottom: 27px;
 
     @include tablet {
       max-width: 695px;

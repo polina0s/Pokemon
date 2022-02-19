@@ -87,6 +87,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 49px;
+    padding-bottom: 53px;
 
     @include tablet {
       padding-left: 13px;
@@ -138,6 +139,30 @@
       margin-left: 6px;
     }
 
+  }
+
+  &__cards-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1125px;
+    margin: 0 auto;
+  }
+
+  &__loader {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 56px;
+    padding-top: 30px;
+    padding-bottom: 33px;
+
+    &-circle {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $lightBlack;
+    }
   }
 }
 

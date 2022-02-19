@@ -1,6 +1,9 @@
 include ../../components/button/button
 
 mixin card(params)
+  -
+    const backgroundClass = params.background ? `card__img-cont--${params.background}`: 'card__img-cont--yellow'
+
   div.card(class=attributes.class)= title
     div.card__info
       p.card__info-title= params.title ? params.title : 'Pickachu'
@@ -14,7 +17,7 @@ mixin card(params)
       div.card__tags
         +btn('Grass')(class="card__tags-item btn--small btn--green").card__tags-item
         +btn('Poison')(class="card__tags-item btn--small btn--blue").card__tags-item
-    div.card__img-cont= params.background
+    div.card__img-cont(class=backgroundClass)
       img(src=params.img, alt="").card__img
 
 
