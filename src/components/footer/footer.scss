@@ -1,28 +1,32 @@
 @import "../../styles/variables.scss";
 
 .footer {
-  width: 100%;
   margin: 0 auto;
-  flex: 0 0 auto;
  
   &__cont {
-    max-width: 1125px;
+    width: 1125px;
+    height: 54px;
     margin: 0 auto;
-    padding-bottom: 27px;
 
     @include tablet {
-      max-width: 695px;
+      width: 695px;
+      height: 43px;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 56px;
     }
   }
 
   &__nav {
     list-style: none;
     display: flex;
-    text-align: center;
     justify-content: space-between;
 
     @include mobile {
-    flex-direction: column;
+      text-align: center;
+      flex-direction: column;
     }
   }
 

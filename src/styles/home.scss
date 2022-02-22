@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -9,31 +9,42 @@ body {
 }
 
 .background {
-  height: 100%;
   background: $yellowGradient;
-  flex: 1 0 auto;
+  height: 100%;
+
+  @include mobile {
+    min-height: 100%;
+  }
 }
 
 .home {
+  min-height: calc(100vh - 54px);
   width: 100%;
   margin: 0 auto;
-  
+
+  @include tablet {
+    min-height: calc(100vh - 43px);
+  }
+
+  @include mobile {
+    min-height: calc(100vh - 56px);
+  }
+
 
   &__cont {
     max-width: 1283px;
     display: flex;
     margin: 0 auto;
-    padding-bottom: 129px;
     position: relative;
+    padding-bottom: 192px;
 
     @include tablet {
-      padding-bottom: 61px;
-      padding-top: 18px;
+      padding-bottom: 62px;
     }
 
     @include mobile {
-      padding-bottom: 28px;
       padding-top: 46px;
+      padding-bottom: 28px;
     }
   }
 
@@ -45,7 +56,6 @@ body {
 
     @include tablet {
       max-width: 730px;
-      display: block;
       margin: 0 auto;
       padding-top: 497px;
     }
@@ -119,7 +129,7 @@ body {
       height: 539px;
       margin: 0 auto;
       left: 0;
-      
+      padding-top: 18px;
     }
 
     @include mobile {
