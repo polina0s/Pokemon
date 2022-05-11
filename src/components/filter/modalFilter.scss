@@ -1,0 +1,46 @@
+.filter {
+      width: 285px;
+      height: 105px;
+      box-shadow: $mobInputShadow;
+      padding-top: 13px;
+      padding-left: 12px;
+      margin-top: 8px;
+
+      &--white {
+        background: $white;
+      }
+
+      &--grey {
+        background: $grey;
+      }
+
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+
+
+        &-text {
+          font: 400 12px $smallButton;
+          line-height: 14px;
+          padding-bottom: 5px;
+          padding-left: 10px;
+        }
+
+        &-line {
+          width: 16px;
+          height: 2px;
+          border-radius: 2px;
+          background: $lightBlack;
+          margin-top: 29px;
+          margin-left: 21px;
+          margin-right: 21px;
+        }
+
+        &-btn {
+          margin-top: 20px;
+          margin-left: 185px;
+        }
+      }
+}
+  

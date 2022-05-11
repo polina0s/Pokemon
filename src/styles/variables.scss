@@ -11,9 +11,12 @@ $blue: #07D6F2;
 $grey: #F2F2F2;
 $lightGrey: #F6F7F9;
 $darkGrey: #4B4B4B;
+$white: #FDFDFD;
+
 
 // Gradients 
 $redGradient: linear-gradient(270deg, #B33327 0.15%, #D93E30 100%);
+$darkRedGradient: linear-gradient(180deg, #732119 42.19%, #D93E30 100%);
 $greenGradient: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%);
 $pinkGradient: linear-gradient(270deg, #F89EAE 0.15%, #F4B5C1 100%);
 $blueGradient: linear-gradient(270deg, #5BC7FA 0.15%, #35BAFF 100%);
@@ -27,6 +30,9 @@ $smallBtnShadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
 $deskInputShadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.2);
 $tablInputShadow: 2px 2px 2px 0px rgba(33, 33, 33, 0.1);
 $mobInputShadow: 4px 4px 4px 0px rgba(33, 33, 33, 0.1);
+$shadow: 4px 4px 24px 0px rgba(1, 17, 38, 0.2);
+$greyShadow: 4px 4px 8px 0px rgba(1, 28, 64, 0.2);
+
 
 $transparentBlack: rgba(0, 0, 0, 0.5);
 

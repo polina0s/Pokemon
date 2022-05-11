@@ -1,0 +1,35 @@
+.checkbox {
+  padding-bottom: 8px;
+
+  &-square {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    
+    &:checked + label::before {
+      background-color: $red;
+    }
+    
+    & + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      
+      &::before { 
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid $lightBlack;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-name {
+    font: 400 16px $desc;
+    line-height: 20px;
+  }
+}

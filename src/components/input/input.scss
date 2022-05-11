@@ -1,0 +1,41 @@
+.input {
+  border: none;
+  font-weight: 400;
+  font-family: $desc;
+  outline: none;
+  box-shadow: $tablInputShadow;
+
+  &--big {
+    width: 1088px;
+    height: 53px;
+    border-radius: 40px;
+    padding: 16px 0px 16px 31px;
+    background: $grey;
+    font-size: 16px;
+    line-height: 20px;
+     
+      @include tablet {
+        width: 695px;
+        height: 36px;
+        padding: 8px 0px 8px 20px;
+        box-shadow: $tablInputShadow;
+      }
+
+      @include mobile {
+        width: 322px;
+        height: 31px;
+        padding: 8px 0px 8px 19px;
+        box-shadow: $mobInputShadow;
+      }
+  }
+
+  &--small {
+    width: 96px;
+    height: 19px;
+    border-radius: 16px;
+    padding: 2px 50px 2px 12px;
+    background: $lightGrey;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

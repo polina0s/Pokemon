@@ -1,4 +1,9 @@
 include ../components/cards/card
+include ../components/card-modal/bigCard
+include ../components/filter/modalFilter
+include ../components/input/input
+include ../components/checkbox/checkbox
+include ../components/modal/modal
 
 doctype html 
 html(lang="en")
@@ -16,88 +21,132 @@ html(lang="en")
                             p.pokedex__title 800 
                                 b Pokemons 
                                 | for you to choose your favorite
-                            input.pokedex__input(type="text" placeholder="Encuentra tu pokémon...")
+                            +input({
+                                text:'Encuentra tu pokémon...',
+                            })(class="input--big")
                     div.pokedex__filters
-                        div.pokedex__select 
-                            span.pokedex__select-text Tipo
-                            span.pokedex__select-icon 
-                                img(src="../assets/images/selectIcon.svg", alt="")
-                        div.pokedex__select 
-                            span.pokedex__select-text Ataque
-                            span.pokedex__select-icon 
-                                img(src="../assets/images/selectIcon.svg", alt="")
-                        div.pokedex__select 
+                        div.pokedex__select-wrapper
+                            div.pokedex__select#tipo
+                                span.pokedex__select-text Tipo
+                                span.pokedex__select-icon 
+                                    img(src="../assets/images/selectIcon.svg", alt="")
+                            +modal('tipoFilter')
+                                div.pokedex__select-filter
+                                    +checkbox({
+                                        name: "Fire",
+                                    })
+                                    +checkbox({
+                                        name: "Normal",
+                                    })
+                                    +checkbox({
+                                        name: "Electric",
+                                    })
+                                    +checkbox({
+                                        name: "Water",
+                                    })
+                        div.pokedex__select-wrapper
+                            div.pokedex__select#ataque
+                                span.pokedex__select-text Ataque
+                                span.pokedex__select-icon 
+                                    img(src="../assets/images/selectIcon.svg", alt="")
+                            +modal('ataqueFilter')  
+                                +filter ({
+                                    from: '70 000',
+                                    to: '50 000',
+                                })
+                        div.pokedex__select#experiencia
                             span.pokedex__select-text Experiencia
                             span.pokedex__select-icon 
                                 img(src="../assets/images/selectIcon.svg", alt="")
+                            +modal('experienciaFilter')
+                                +filter ({
+                                    from: '70 000',
+                                    to: '50 000',
+                                })
                     div.pokedex__filter-btn
-                            span.pokedex__filter-btn-text Filter    
+                        span.pokedex__filter-btn-text Filter    
             div.pokedex__cards-cont 
                 +card({
                     title: "Pachirisu",
                     attack: 419,
                     defence: 49,
                     background: 'blue',
-                    img: src="../../assets/images/Pachirisu.svg",
+                    img: src="../../assets/images/Pachirisu.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Pyroar",
                     attack: 419,
                     defence: 49,
                     background: 'red',
-                    img: src="../../assets/images/Pyroar.svg",
+                    img: src="../../assets/images/Pyroar.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Pikachu",
                     attack: 419,
                     defence: 49,
                     background: 'yellow',
-                    img: src="../../assets/images/PikachuCard.svg",
+                    img: src="../../assets/images/PikachuCard.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Quilava",
                     attack: 419,
                     defence: 49,
                     background: 'green',
-                    img: src="../../assets/images/Quilava.svg",
+                    img: src="../../assets/images/Quilava.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Squirtle",
                     attack: 419,
                     defence: 49,
                     background: 'blue',
-                    img: src="../../assets/images/Squirtle.svg",
+                    img: src="../../assets/images/Squirtle.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Charizard",
                     attack: 419,
                     defence: 49,
                     background: 'red',
-                    img: src="../../assets/images/Charizard.svg",
+                    img: src="../../assets/images/CharizardSmall.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Mudkip",
                     attack: 419,
                     defence: 49,
                     background: 'blue',
-                    img: src="../../assets/images/Mudkip.svg",
+                    img: src="../../assets/images/Mudkip.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Jigglypuff",
                     attack: 419,
                     defence: 49,
                     background: 'pink',
-                    img: src="../../assets/images/Jigglypuff.svg",
+                    img: src="../../assets/images/Jigglypuff.png",
                 })(class="pokedex__card-item")
                 +card({
                     title: "Tyranitar",
                     attack: 419,
                     defence: 49,
                     background: 'green',
-                    img: src="../../assets/images/Tyranitar.svg",
+                    img: src="../../assets/images/Tyranitar.png",
                 })(class="pokedex__card-item")
             div.pokedex__loader
                 div.pokedex__loader-circle 
                 div.pokedex__loader-circle 
                 div.pokedex__loader-circle    
-            include ../components/footer/footer.pug        
+            include ../components/footer/footer.pug
+
+        +card-modal({
+        img_background: 'red',
+        info_background: 'darkRed',
+        img: src="../assets/images/Charizard.png",
+        name: 'Charizard',
+        gen: 'Generation 1',
+        id: 578,
+        abil: 'Overgrow - Chlorophyll',
+        healthy_points: '1 000 000',
+        exp_points: '1 000 000',
+        def_points: 49,
+        attack_points: 165,
+        sp_attack_points: 130,
+        sp_def_points: 271,
+    })(id="charizard")

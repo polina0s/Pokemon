@@ -21,10 +21,15 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/pages/home.pug",
+      filename: "home.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/pokedex.pug",
       filename: "pokedex.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/legendaries.pug",
+      filename: "legendaries.html",
     }),
   ],
   module: {

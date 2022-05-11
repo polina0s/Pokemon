@@ -1,0 +1,21 @@
+include ../../components/button/button
+
+mixin filter(params)
+  -
+   const backgroundColor = params.background ? `filter--${params.background}`: 'filter--grey'
+
+  div(class=backgroundColor class="filter")
+    div.filter__items
+      div.filter__item
+          p.filter__items-text From 
+          +input({
+            text:params.from,
+          })(class="input--small")
+      div.filter__items-line
+      div.filter__item
+          p.filter__items-text To    
+          +input({
+            text:params.to,
+          })(class="input--small")
+      div.filter__items-btn       
+         +btn('Apply')(class="card__tags-item btn--small btn--green")

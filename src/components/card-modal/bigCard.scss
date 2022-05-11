@@ -1,0 +1,158 @@
+@import "../../styles/variables.scss";
+
+.modalCard {
+  width: 796px;
+  height: 371px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2000;
+  display: none;
+  top: 351px;
+  right: 320px;
+
+
+  &--open {
+    display: flex;
+  }
+
+  &__img {
+    width: 364px;
+
+    &-cont {
+      width: 341px;
+      padding-top: 39px;
+    }
+
+    &_background {
+      &--red {
+         background: $redGradient;
+      }
+    }
+
+    &-tags {
+      margin-right: 10px;
+      position: absolute;
+      top: 340px;
+      right: 450px;
+    }
+  }
+
+  &__info {
+    padding-top: 29px;
+    padding-left: 13px;
+    
+    &-title {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 23px;
+
+      &-name {
+        font: 700 36px $mainFont;
+        color: $white;
+        line-height: 42px;
+        padding-right: 57px;
+      }
+
+      &-gen {
+        font: 400 24px $mainFont;
+        color: $white;
+        line-height: 30px;
+        padding-right: 8px;
+      }
+
+      &-id {
+        width: 41px;
+        height: 41px;
+        background: $lightYellow;
+        border-radius: 50%;
+        font: 400 16px $mainFont;
+        color: $black;
+        line-height: 19px;
+        text-align: center;
+        padding-top: 12px;
+      }
+
+    }
+
+    &-abil-small {
+      width: 264px;
+      height: 60px;
+      background-color: $white;
+      border-radius: 8px;
+      box-shadow: $mobInputShadow;
+      padding-top: 12px;
+      padding-left: 28px;
+      font: 400 16px $mainFont;
+      line-height: 19px;
+      margin-bottom: 21px;
+    }
+
+    &-abil-big {
+      display: flex;
+      width: 401px;
+      height: 78px;
+      background-color: $white;
+      border-radius: 8px;
+      box-shadow: $mobInputShadow;
+      padding: 18px 18px 8px 18px;
+      font: 400 16px $mainFont;
+      line-height: 19px;
+      margin-bottom: 21px;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        width: 167px;
+        height: 42px;
+        margin-right: 27px;    
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+
+      &-points-health {
+        font-weight: 700;
+      }
+
+      &-points-exp {
+        font-weight: 700;
+      }
+    }
+
+    &-prop {
+      display: flex;
+
+      &-item {
+        width: 82px;
+        height: 70px;
+        background-color: $white;
+        border-radius: 8px;
+        box-shadow: $shadow;
+        margin-right: 24px;
+        font: 400 12px $mainFont;
+        color: $darkGrey;
+        text-align: center;
+        padding-top: 8px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        &-points {
+          width: 36px;
+          height: 37px;
+          border: 3px solid $lightBlack;
+          border-radius: 50%;
+          font: 400 16px $mainFont;
+          line-height: 19px;
+          text-align: center;
+          padding-top: 6px;
+          margin: 0 auto;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}
