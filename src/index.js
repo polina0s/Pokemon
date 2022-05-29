@@ -24,36 +24,6 @@ function clickClose(e) {
 btnClose.addEventListener("click", clickClose);
 btnOpen.addEventListener("click", clickOpen);
 
-// const TIPO_LIST = {
-//   OPEN: "pokedex__select-filter--open",
-//   CLOSE: "pokedex__select-filter--close",
-// };
-
-// const tipo = document.querySelector("#tipo");
-// const tipoFilter = document.querySelector("#tipoFilter");
-
-// function toogle(e) {
-//   function tipoOpen() {
-//     tipoFilter.classList.remove(TIPO_LIST.CLOSE);
-//     tipoFilter.classList.add(TIPO_LIST.OPEN);
-//   }
-
-//   function tipoClose() {
-//     tipoFilter.classList.remove(TIPO_LIST.OPEN);
-//     tipoFilter.classList.add(TIPO_LIST.CLOSE);
-//   }
-
-//   const isOpen = tipoFilter.classList.contains(TIPO_LIST.OPEN);
-
-//   if (isOpen) {
-//     tipoClose();
-//   } else {
-//     tipoOpen();
-//   }
-// }
-
-// tipo.addEventListener("click", toogle);
-
 function initCards() {
   const cardItems = document.querySelectorAll(".pokedex__card-item");
 
@@ -64,9 +34,11 @@ function initCards() {
       mainCard.classList.add("modalCard--open");
     });
 
-    mainCard.addEventListener("click", () => {
-      mainCard.classList.remove("modalCard--open");
-    });
+    mainCard
+      .querySelector(".modalCard__close")
+      .addEventListener("click", () => {
+        mainCard.classList.remove("modalCard--open");
+      });
   });
 }
 

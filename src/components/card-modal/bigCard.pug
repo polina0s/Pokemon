@@ -2,30 +2,39 @@ include ../../components/button/button
 
 mixin card-modal(params)
   -
-    const img_background = `modal__img--${params.img_background}`
-    const info_background = `modal__info--${params.info_background}`
-
-  div.modalCard(class=attributes.class id=attributes.id)= title
+    const img_background = `modalCard__img--${params.img_background}`
+    const info_background = `modalCard__info--${params.info_background}`
+    const modalBackground = `modalCard--${params.modalBackground}`
+  
+  div.modalCard(class=attributes.class id=attributes.id class=modalBackground)= title
+    img(src="../../assets/images/closeIcon.svg", alt="close").modalCard__close
+    div.modalCard__mobileTitle
+      p.modalCard__mobileTitle-name= params.name
     div.modalCard__img(class=img_background)
       img(src=params.img, alt="").modalCard__img-cont
       div.modalCard__img-tags
-        +btn('Grass')(class="card__tags-item btn--small btn--green").modalCard__img-cont-tags-item
-        +btn('Poison')(class="card__tags-item btn--small btn--blue").modalCard__img-cont-tags-item
+        +btn('Grass')(class="card__tags-item btn--small btn--green").modalCard__img-tags-item
+        +btn('Poison')(class="card__tags-item btn--small btn--blue").modalCard__img-tags-item
     div.modalCard__info(class=info_background)
       div.modalCard__info-title
         p.modalCard__info-title-name= params.name
         p.modalCard__info-title-gen= params.gen
         p.modalCard__info-title-id= params.id
+      div.modalCard__info-title-mobile
+        p.modalCard__info-title-mobile-id= params.id   
+        p.modalCard__info-title-mobile-gen= params.gen 
+        +btn('Grass')(class="card__tags-item btn--small btn--green").modalCard__info-title-mobile-tag
+        +btn('Poison')(class="card__tags-item btn--small btn--blue").modalCard__info-title-mobile-tag
       div.modalCard__info-abil-small
-        p Abilities
+        p.modalCard__info-abil-small-abilities Abilities
         p= params.abil
       div.modalCard__info-abil-big
         div.modalCard__info-abil-big-item
-          p Healthy Points
+          p.modalCard__info-abil-big-item-healthyPoints Healthy Points
           p.modalCard__info-abil-big-points-health= params.healthy_points
           img(src="../../assets/images/CardChargeGreen.png", alt="")
         div.modalCard__info-abil-big-item
-          p Experience 
+          p.modalCard__info-abil-big-item-experience Experience 
           p.modalCard__info-abil-big-points-exp= params.exp_points
           img(src="../../assets/images/CardChargeYellow.png", alt="")
       div.modalCard__info-prop
