@@ -34,16 +34,19 @@ html(lang="en")
                                 div.pokedex__select-filter
                                     +checkbox({
                                         name: "Fire",
-                                    })
+                                    })(id="fire")
                                     +checkbox({
+                                        id: "Normal",
                                         name: "Normal",
-                                    })
+                                    })(id="normal")
                                     +checkbox({
+                                        id: "Electric",
                                         name: "Electric",
-                                    })
+                                    })(id="electric")
                                     +checkbox({
+                                        id: "Water",
                                         name: "Water",
-                                    })
+                                    })(id="water")
                         div.pokedex__select-wrapper
                             div.pokedex__select#ataque
                                 span.pokedex__select-text Ataque
@@ -54,16 +57,17 @@ html(lang="en")
                                     from: '70 000',
                                     to: '50 000',
                                 })
-                        div.pokedex__select#experiencia
-                            span.pokedex__select-text Experiencia
-                            span.pokedex__select-icon 
-                                img(src="../assets/images/selectIcon.svg", alt="")
+                        div.pokedex__select-wrapper        
+                            div.pokedex__select#experiencia
+                                span.pokedex__select-text Experiencia
+                                span.pokedex__select-icon 
+                                    img(src="../assets/images/selectIcon.svg", alt="")
                             +modal('experienciaFilter')
                                 +filter ({
                                     from: '70 000',
                                     to: '50 000',
                                 })
-                    div.pokedex__filter-btn
+                    div.pokedex__filter-btn(id='mobileFilterButton')
                         span.pokedex__filter-btn-text Filter    
             div.pokedex__cards-cont 
                 +card({
@@ -134,6 +138,84 @@ html(lang="en")
                 div.pokedex__loader-circle 
                 div.pokedex__loader-circle    
             include ../components/footer/footer.pug
+
+        div.mobileFilter-wrapper(id='mobileFilterWindow')
+            div.mobileFilter
+                img.mobileFilter__close(src="../assets/images/closeIcon.png", alt="close", id='filterClose')
+                div.mobileFilter__type
+                    div.mobileFilter__type-article Type
+                    div.mobileFilter__type-checkbox
+                        div.mobileFilter__type-checkbox-cont
+                            +checkbox ({
+                                name: "Bug",
+                            })(id="Bug", class="")
+                            +checkbox ({
+                                name: "Dark",
+                            })(id="dark")
+                            +checkbox ({
+                                name: "Dragon",
+                            })(id="dragon")
+                            +checkbox ({
+                                name: "Electric",
+                            })(id="electric2")
+                            +checkbox ({
+                                name: "Normal",
+                            })(id="normal2")
+                            +checkbox ({
+                                name: "Rock",
+                            })(id="rock")
+                        div.mobileFilter__type-checkbox-cont    
+                            +checkbox ({
+                                name: "Fairy",
+                            })(id="fairy")
+                            +checkbox ({
+                                name: "Fighting",
+                            })(id="fighting")
+                            +checkbox ({
+                                name: "Fire",
+                            })(id="fire2")
+                            +checkbox ({
+                                name: "Flying",
+                            })(id="flying")
+                            +checkbox ({
+                                name: "Poison",
+                            })(id="poison")
+                            +checkbox ({
+                                name: "Steel",
+                            })(id="steel")
+                        div.mobileFilter__type-checkbox-cont    
+                            +checkbox ({
+                                name: "Ghost",
+                            })(id="ghost")
+                            +checkbox ({
+                                name: "Glass",
+                            })(id="glass")
+                            +checkbox ({
+                                name: "Ground",
+                            })(id="ground")
+                            +checkbox ({
+                                name: "Ice",
+                            })(id="ice")
+                            +checkbox ({
+                                name: "Psychic",
+                            })(id="psychic")
+                            +checkbox ({
+                                name: "Water",
+                            })(id="water2")
+                div.mobileFilter__exp
+                    span.mobileFilter__exp-article Experience
+                    +filter ({
+                        from: '70 000',
+                        to: '50 000',
+                        background: 'white',
+                    })
+                div.mobileFilter__attack
+                    span.mobileFilter__attack-article Attack
+                    +filter ({
+                        from: '70 000',
+                        to: '50 000',
+                        background: 'white',
+                    })
 
         +card-modal({
         img_background: 'red',

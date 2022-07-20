@@ -43,11 +43,9 @@
   }
 
   &--small-no-shadow {
-    @include mobile {
-      min-width: 66px;
-      line-height: 15px;
-      font: 400 13px $smallButton;
-    }  
+    min-width: 66px;
+    line-height: 15px;
+    font: 400 13px $smallButton;  
   }
 
   &--green {

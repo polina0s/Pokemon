@@ -1,4 +1,7 @@
-import { Modal } from "./components/modal/modal";
+import { Modal, FilterModal } from "./components/modal/modal";
+
+// const mobileFilterButton = document.querySelector("#mobileFilterButton");
+// mobileFilterButton.addEventListener("click", () => console.log("123"));
 
 const CLASS_LIST = {
   OPEN: "popup--open",
@@ -46,6 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
   new Modal("tipo", "tipoFilter");
   new Modal("ataque", "ataqueFilter");
   new Modal("experiencia", "experienciaFilter");
+
+  new FilterModal(
+    "mobileFilterButton",
+    "mobileFilterWindow",
+    "mobileFilter-wrapper--open",
+    "filterClose"
+  );
 
   initCards();
 });

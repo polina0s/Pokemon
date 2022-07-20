@@ -1,7 +1,14 @@
 export class Modal {
-  constructor(elId, modalId) {
+  /**
+   * Класс модалок для открытия их по клику
+   * @param {string} elId - id элемента, при клике на который будет открываться модалка
+   * @param {string} modalId
+   * @param {string | undefined} customModalOpenClass
+   */
+  constructor(elId, modalId, customModalOpenClass = "modal--open") {
     this.elId = elId;
     this.modaId = modalId;
+    this.customModalOpenClass = customModalOpenClass;
 
     this.element = document.getElementById(this.elId);
     this.modal = document.getElementById(this.modaId);
@@ -17,20 +24,33 @@ export class Modal {
   }
 
   showModal() {
-    this.modal.classList.add("modal--open");
+    this.modal.classList.add(this.customModalOpenClass);
   }
 
   hideModal() {
-    this.modal.classList.remove("modal--open");
+    this.modal.classList.remove(this.customModalOpenClass);
   }
 
   toggleModal() {
-    const isOpen = this.modal.classList.contains("modal--open");
+    const isOpen = this.modal.classList.contains(this.customModalOpenClass);
 
     if (isOpen) {
       this.hideModal();
     } else {
       this.showModal();
     }
+  }
+}
+
+export class FilterModal extends Modal {
+  constructor(elId, modalId, customModalOpenClass, modalCloseButtonId) {
+    super(elId, modalId, customModalOpenClass);
+
+    this.modalCloseButtonId = modalCloseButtonId;
+    this.modalCloseButton = document.getElementById(this.modalCloseButtonId);
+
+    this.modalCloseButton.addEventListener("click", () => super.hideModal());
+
+    console.log(this.modalCloseButton);
   }
 }
