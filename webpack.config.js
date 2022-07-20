@@ -31,6 +31,10 @@ module.exports = {
       template: "./src/pages/legendaries.pug",
       filename: "legendaries.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/404.pug",
+      filename: "404.html",
+    }),
   ],
   module: {
     rules: [

@@ -1,8 +1,5 @@
 import { Modal, FilterModal } from "./components/modal/modal";
 
-// const mobileFilterButton = document.querySelector("#mobileFilterButton");
-// mobileFilterButton.addEventListener("click", () => console.log("123"));
-
 const CLASS_LIST = {
   OPEN: "popup--open",
   CLOSE: "popup--close",
